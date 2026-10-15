@@ -10,7 +10,7 @@ p {
 }
 
 h1 {
-	color: hsl(270, 50%, 60%);
+	color: orange;
 	font-family:'Gentium Plus', 'Cambria', serif;
 	font-size: 48px;
 	font-kerning: normal;
