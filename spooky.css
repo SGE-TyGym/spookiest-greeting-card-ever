@@ -2,7 +2,7 @@ body {
 	background-color: black;
 }
 
-tx {
+p {
 	color: orange;
 	font-family:'Gentium Plus', 'Cambria', serif;
 	font-size: 24px;
@@ -12,20 +12,6 @@ tx {
 h1 {
 	color: hsl(270, 50%, 60%);
 	font-family:'Gentium Plus', 'Cambria', serif;
-	font-size: 48px;
-	font-kerning: normal;
-}
-
-inpt {
-	color: black;
-	font-family:'Arial', sans-serif;
-	font-size: 48px;
-	font-kerning: normal;
-}
-
-rply {
-	color: hsl(120, 100%, 50%);
-	font-family:'OCR A Extended', 'Cascadia Code', 'Courier New', monospace;
 	font-size: 48px;
 	font-kerning: normal;
 }
@@ -60,4 +46,8 @@ a.purp {
 
 inv {
 	color: black;
+}
+
+.cen {
+	text-align: center;
 }
