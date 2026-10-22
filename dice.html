@@ -6,5 +6,34 @@
 <p class="cen">Reading one's fate is simple. All you have to do is think on what you intend to do, and dice will be cast. The higher roll, the better it will go.<br><br>
 Your roll:</p>
 <div class="cen">
-    <textarea id="dice1" class="cen" readonly="true" cols="3" rows="1" style="color: orange; background-color: black; outline: none; border: none; font-family:'Gentium Plus', 'Cambria', serif; font-size: 48px; display: inline-block;">A</textarea> <textarea id="dice2" class="cen" readonly="true" cols="3" rows="1" style="color: orange; background-color: black; outline: none; border: none; font-family:'Gentium Plus', 'Cambria', serif; font-size: 48px; display: inline-block;">A</textarea>
+    <textarea id="dice1" class="cen" readonly="true" cols="2" rows="1" style="color: orange; background-color: black; outline: none; border: none; font-family:'Gentium Plus', 'Cambria', serif; font-size: 48px; display: inline-block;">A</textarea> <textarea id="dice2" class="cen" readonly="true" cols="2" rows="1" style="color: orange; background-color: black; outline: none; border: none; font-family:'Gentium Plus', 'Cambria', serif; font-size: 48px; display: inline-block;">A</textarea><br>
+    <button type="button" id="ROLL" rows="1" cols="4" style="color: black; font-family:'Gentium Plus', 'Cambria', serif; font-size: 18px; font-kerning: normal; display: inline-block; vertical-align: top; height: 26.5px;">Ask</button><br>
+    <textarea id="FATE" class="cen" readonly="true" cols="24" rows="4" style="color: orange; background-color: black; outline: none; border: none; font-family:'Gentium Plus', 'Cambria', serif; font-size: 24px; display: inline-block;">A</textarea>
 </div>
+<p class="cen">Nevermind I can't get this to work.<br>The real spooky monster all along was JavaScript.</p>
+
+<script>
+    document.getElementById("ROLL").addEventListener("click", QRoll);
+function QRoll() {
+    var Rand1 = Math.floor(Math.random() * 20) + 31;
+    var Rand2 = Math.floor(Math.random() * 20) + 31;
+    var k = 0;
+    var j = 0;
+    function QRoll1() {
+        if (k < Rand1) {
+            k++;
+            var diceRoll1 = Math.floor(Math.random() * 6) + 1
+            document.getElementById("dice1").innerHTML = diceRoll1
+            setTimeout(QRoll1, 100);
+        }
+    }
+    function QRoll2() {
+        if (j < Rand2) {
+            j++;
+            var diceRoll2 = Math.floor(Math.random() * 6) + 1
+            document.getElementById("dice1").innerHTML = diceRoll2
+            setTimeout(QRoll2, 100);
+        }
+    }
+}
+</script>
